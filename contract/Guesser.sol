@@ -41,10 +41,13 @@ contract  Guesser {
             senderTarget = addressB;
         }
         uint256 amount =  rental*3/4;
+        uint256 amount2 =  rental*1/10;
         //检查合约的余额是否充足
         require(this.balance >= amount);
         rental -= amount;
+        rental -= amount2;
         senderTarget.transfer(amount);
+        msg.sender.transfer(amount2);
     }
 
     /**

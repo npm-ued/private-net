@@ -1,0 +1,4 @@
+geth/
+keystore/
+geth.ipc
+geth.log
